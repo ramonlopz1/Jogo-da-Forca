@@ -1,0 +1,233 @@
+@import 'variaveis.scss';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    font-family: sans-serif;
+    background-color: rgb(21, 21, 21);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color: black;
+    border: 5px solid $cian;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px black;
+    
+    height: 850px;
+    width: 70%;
+
+    h1 {
+        color: $darkBlue;
+        font-size: 40px;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row;
+
+        #chances {
+            font-size: 28px;
+            color: green;
+            &::after {
+                content: "\00a0";
+            }
+        }
+
+        #drawAreaPoints {
+            width: 200px;
+            display: flex;
+            justify-content: flex-start;
+        
+        }
+    }
+
+    article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    
+        height: 500px;
+        width: 100%;
+
+        #doll {
+            height: 810px;
+            width: 40%;
+        }
+
+        #content {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        
+            height: 431px;
+        
+            #choosedLetter {
+                color: $cian;
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+                border: 3px solid $lightGray;
+            
+                height: 100px;
+                width: 600px;
+            }
+        
+            #secretWord {
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+                overflow: hidden;
+                background-color: $cian;
+                border-radius: 7px;
+                height: 200px;
+                width: 600px;
+        
+                .spanLetras {
+        
+                    font-size: 45px;
+                    margin: 10px;
+                }
+            }
+        }     
+    }
+
+    #finalResult {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        color: $darkBlue;
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+#avaibleWords {
+    color: $cian;
+    font-size: 17px;
+    justify-content: space-between;
+    overflow-y: hidden;
+    margin-left: 10px;
+    border-radius: 20px 0px 0px 20px;
+
+    background-color: black;
+    width: 300px;
+
+    #words {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        margin-bottom: 75px;
+    }
+
+    #insertWords {
+        display: none;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    
+        position: absolute;
+        bottom: 170px;
+    
+        background-color: $cian;
+        color: white;
+        height: 100px;
+        width: 300px;
+    
+        border-radius: 7px;
+    }
+
+    #btnAdd {
+    
+        background-color: $cian;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        height: 30px;
+        width: 50px;
+        margin-bottom: 50px;
+    
+        &:hover {
+            background-color: #f05375;
+        }
+    }
+}
+
+
+@media (max-width: 1400px) {
+    section {
+        
+        height: 570px;
+    
+        h1 {
+            font-size: 25px;
+        }
+    
+        article {
+           
+            height: 400px;
+    
+            #doll {
+                margin-left: -50px;
+            }
+    
+            #content {
+                height: 270px;
+                width: 70%;
+            
+                #choosedLetter {
+                    font-size: 20px;
+                    height: 70px;
+                    width: 400px;
+                }
+            
+                #secretWord {
+                    height: 130px;
+                    width: 400px;
+            
+                    .spanLetras {
+                        font-size: 25px;
+                    }
+                }
+            }     
+        }
+    
+        #finalResult {
+            font-size: 18px;
+        }
+    }
+    
+    #avaibleWords {
+        font-size: 15px;
+    
+        #words {
+            margin-bottom: 55px;
+        }
+    
+        #insertWords {
+            height: 100px;
+            width: 250px;
+        }
+    }
+}
