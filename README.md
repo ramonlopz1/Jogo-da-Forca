@@ -1,7 +1,7 @@
 # Challenge-Oracle-ONE-Parte-2
 #challengeonejogoforca
 
-Acesse online em: https://ramonlopz1.github.io/Challenge-Oracle-ONE-Parte-2/public/
+Acesse online em: https://ramonlopz1.github.io/Jogo-da-Forca/public/
 
 Jogo da Forca
 
